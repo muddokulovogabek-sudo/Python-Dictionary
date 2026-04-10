@@ -19,3 +19,14 @@ products = [
     }
 ]
 
+jami = 0
+for p in products:
+    jami += p["price"] * p["quantity"]
+
+eng_qimmat = products[0]
+for p in products:
+    if p["price"] > eng_qimmat["price"]:
+        eng_qimmat = p
+
+
+print("jami: ", jami)
